@@ -1,40 +1,86 @@
-<ul class="m-4 text-blue-400">
-  <li>
-    <a routerLink="dashboard"> Dashboard </a>
-  </li>
-  <li>
-    <a routerLink="my-teams"> MY Teams </a>
-  </li>
-  <li>
-    <a routerLink="organization"> Organization </a>
-    <ul class="ml-4">
+<section class="bg-brand-primary-dark">
+  <header class="header w-4/5 mx-auto p-3 flex justify-between items-center">
+    <!-- Logo -->
+    <h2 class="text-white text-3xl font-extrabold">Qrove</h2>
+    <!-- End Logo -->
+
+    <ul class="header-menu p-0 text-white flex gap-x-7">
       <li>
-        <a [routerLink]="['organization', 'designations']"> Designation </a>
+        <a class="text-sm" routerLink="dashboard"> Dashboard </a>
       </li>
       <li>
-        <a [routerLink]="['organization', 'departments']"> Departments </a>
+        <a class="text-sm" routerLink="my-teams"> My Teams </a>
       </li>
       <li>
-        <a [routerLink]="['organization', 'tools-and-techs']">
-          Tools & Techs
-        </a>
+        <a class="text-sm" routerLink="projects"> Projects </a>
+        <ul class="ml-4 hidden">
+          <li>
+            <a class="text-sm" [routerLink]="['projects', 'my-projects']">
+              My Project
+            </a>
+          </li>
+          <li>
+            <a class="text-sm" [routerLink]="['projects', 'active-projects']">
+              Active Projects
+            </a>
+          </li>
+          <li>
+            <a class="text-sm" [routerLink]="['projects', 'project-history']">
+              Project History
+            </a>
+          </li>
+        </ul>
       </li>
-      <li><a [routerLink]="['organization', 'employees']"> Employees </a></li>
-      <li><a [routerLink]="['organization', 'leaders']"> Leaders </a></li>
-      <li><a [routerLink]="['organization', 'downloads']"> Downloads </a></li>
-      <li><a routerLink="help"> Help </a></li>
+      <li>
+        <a class="text-sm" routerLink="organization"> Organization </a>
+        <ul class="ml-4 hidden">
+          <li>
+            <a class="text-sm" [routerLink]="['organization', 'designations']">
+              Designation
+            </a>
+          </li>
+          <li>
+            <a class="text-sm" [routerLink]="['organization', 'departments']">
+              Departments
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-sm"
+              [routerLink]="['organization', 'tools-and-techs']"
+            >
+              Tools & Techs
+            </a>
+          </li>
+          <li>
+            <a class="text-sm" [routerLink]="['organization', 'employees']">
+              Employees
+            </a>
+          </li>
+          <li class="text-sm">
+            <a [routerLink]="['organization', 'leaders']"> Leaders </a>
+          </li>
+          <li>
+            <a class="text-sm" [routerLink]="['organization', 'downloads']">
+              Downloads
+            </a>
+          </li>
+          <li class="text-sm"><a routerLink="help"> Help </a></li>
+        </ul>
+      </li>
     </ul>
-  </li>
-  <li>
-    <a routerLink="projects"> Projects </a>
-    <ul class="ml-4">
-      <li><a [routerLink]="['projects', 'my-projects']"> My Project </a></li>
+
+    <ul class="header-right p-0 text-white">
       <li>
-        <a [routerLink]="['projects', 'active-projects']"> Active Projects </a>
-      </li>
-      <li>
-        <a [routerLink]="['projects', 'project-history']"> Project History </a>
+        <img
+          class="rounded-full"
+          src="assets/images/dummy-dp.jpg"
+          alt="user profile"
+        />
       </li>
     </ul>
-  </li>
-</ul>
+  </header>
+</section>
+<section class="bg-white shadow drop-shadow-sm">
+  <app-sub-header></app-sub-header>
+</section>
