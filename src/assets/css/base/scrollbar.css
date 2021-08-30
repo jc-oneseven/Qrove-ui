@@ -1,0 +1,40 @@
+/* Scrollbar */
+
+:root {
+  --custom-scrollbar-thumb-color: #d0d7e3;
+  --custom-scrollbar-track-color: #131d2e;
+  --custom-scrollbar-thumb-hover-color: #7b869b;
+
+  --custom-scrollbar-width: 7px;
+  --custom-scrollbar-round: 30px;
+}
+
+/*  Custom scrollbar style for Mozilla */
+* {
+  scrollbar-color: var(--custom-scrollbar-thumb-color)
+    var(--custom-scrollbar-track-color);
+  scrollbar-width: thin;
+}
+
+/* Custom scrollbar style for Chrome and Edge */
+/* width */
+::-webkit-scrollbar {
+  width: var(--custom-scrollbar-width);
+  height: var(--custom-scrollbar-width);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--custom-scrollbar-track-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--custom-scrollbar-thumb-color);
+  border-radius: var(--custom-scrollbar-round);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--custom-scrollbar-thumb-hover-color);
+}

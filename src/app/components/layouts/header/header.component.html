@@ -1,86 +1,125 @@
-<section class="bg-brand-primary-dark">
-  <header class="header w-4/5 mx-auto p-3 flex justify-between items-center">
+<section class="bg-brand-primary-dark relative">
+  <header class="container p-3 flex justify-between items-center">
+    <!-- Humbugger Menu -->
+    <button (click)="toggleSideNav()" class="lg:hidden">
+      <img src="assets/images/icons/menu.svg" alt="Menu" />
+    </button>
+    <!-- End Humbugger Menu -->
     <!-- Logo -->
-    <h2 class="text-white text-3xl font-extrabold">Qrove</h2>
+    <h2 class="logo dark:logo">Qrove</h2>
     <!-- End Logo -->
 
-    <ul class="header-menu p-0 text-white flex gap-x-7">
-      <li>
-        <a class="text-sm" routerLink="dashboard"> Dashboard </a>
-      </li>
-      <li>
-        <a class="text-sm" routerLink="my-teams"> My Teams </a>
-      </li>
-      <li>
-        <a class="text-sm" routerLink="projects"> Projects </a>
-        <ul class="ml-4 hidden">
-          <li>
-            <a class="text-sm" [routerLink]="['projects', 'my-projects']">
-              My Project
-            </a>
-          </li>
-          <li>
-            <a class="text-sm" [routerLink]="['projects', 'active-projects']">
-              Active Projects
-            </a>
-          </li>
-          <li>
-            <a class="text-sm" [routerLink]="['projects', 'project-history']">
-              Project History
-            </a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a class="text-sm" routerLink="organization"> Organization </a>
-        <ul class="ml-4 hidden">
-          <li>
-            <a class="text-sm" [routerLink]="['organization', 'designations']">
-              Designation
-            </a>
-          </li>
-          <li>
-            <a class="text-sm" [routerLink]="['organization', 'departments']">
-              Departments
-            </a>
-          </li>
-          <li>
-            <a
-              class="text-sm"
-              [routerLink]="['organization', 'tools-and-techs']"
-            >
-              Tools & Techs
-            </a>
-          </li>
-          <li>
-            <a class="text-sm" [routerLink]="['organization', 'employees']">
-              Employees
-            </a>
-          </li>
-          <li class="text-sm">
-            <a [routerLink]="['organization', 'leaders']"> Leaders </a>
-          </li>
-          <li>
-            <a class="text-sm" [routerLink]="['organization', 'downloads']">
-              Downloads
-            </a>
-          </li>
-          <li class="text-sm"><a routerLink="help"> Help </a></li>
-        </ul>
-      </li>
-    </ul>
-
+    <nav
+      #menu
+      [ngClass]="[
+        innerWidth < '1024' ? 'mobile-menu' : '',
+        (showMenu | async) ? 'menu-expanded' : ''
+      ]"
+    >
+      <header class="flex justify-between">
+        <!-- Logo -->
+        <h2 class="logo dark:logo lg:hidden">Qrove</h2>
+        <!-- End Logo -->
+        <!-- Humbugger Menu -->
+        <button (click)="onMenuClose()" class="lg:hidden">
+          <img src="assets/images/icons/close.svg" alt="Menu" />
+        </button>
+        <!-- End Humbugger Menu -->
+      </header>
+      <ul class="p-0 text-white lg:flex gap-x-7">
+        <li>
+          <a class="menu-item" routerLinkActive="active" routerLink="dashboard">
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a class="menu-item" routerLinkActive="active" routerLink="my-teams">
+            My Teams
+          </a>
+        </li>
+        <li>
+          <a class="menu-item" routerLinkActive="active" routerLink="projects">
+            Projects
+          </a>
+          <ul class="ml-4 hidden">
+            <li>
+              <a class="text-sm" [routerLink]="['projects', 'my-projects']">
+                My Project
+              </a>
+            </li>
+            <li>
+              <a class="text-sm" [routerLink]="['projects', 'active-projects']">
+                Active Projects
+              </a>
+            </li>
+            <li>
+              <a class="text-sm" [routerLink]="['projects', 'project-history']">
+                Project History
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a
+            class="menu-item"
+            routerLinkActive="active"
+            routerLink="organization"
+          >
+            Organization
+          </a>
+          <ul class="ml-4 hidden">
+            <li>
+              <a
+                class="text-sm"
+                [routerLink]="['organization', 'designations']"
+              >
+                Designation
+              </a>
+            </li>
+            <li>
+              <a class="text-sm" [routerLink]="['organization', 'departments']">
+                Departments
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-sm"
+                [routerLink]="['organization', 'tools-and-techs']"
+              >
+                Tools & Techs
+              </a>
+            </li>
+            <li>
+              <a class="text-sm" [routerLink]="['organization', 'employees']">
+                Employees
+              </a>
+            </li>
+            <li class="text-sm">
+              <a [routerLink]="['organization', 'leaders']"> Leaders </a>
+            </li>
+            <li>
+              <a class="text-sm" [routerLink]="['organization', 'downloads']">
+                Downloads
+              </a>
+            </li>
+            <li class="text-sm"><a routerLink="help"> Help </a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
     <ul class="header-right p-0 text-white">
       <li>
-        <img
-          class="rounded-full"
-          src="assets/images/dummy-dp.jpg"
-          alt="user profile"
-        />
+        <a href="#" class="cursor-pointer">
+          <img
+            class="rounded-full h-8"
+            src="assets/images/dummy-dp.jpg"
+            alt="user profile"
+          />
+        </a>
       </li>
     </ul>
   </header>
 </section>
-<section class="bg-white shadow drop-shadow-sm">
+<section class="bg-white shadow drop-shadow-sm relative">
   <app-sub-header></app-sub-header>
 </section>

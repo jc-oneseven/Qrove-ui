@@ -1,0 +1,17 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Custom CSS */
+
+/* Custom Base SCSS Files */
+@import "assets/css/base/index.css";
+
+/* Add Custom/Override components style here */
+@import "assets/css/components/index.css";
+
+/* Add Layout style here */
+/* @import "assets/css/layout/index"; */
+
+/* Add custom utilities class */
+@import "assets/css/utilities/index.css";

@@ -1,0 +1,16 @@
+
+.form-label{
+  @apply text-xs block mb-2 font-semibold text-dark
+}
+.form-control {
+  @apply w-full
+  px-3
+  py-4
+  border-2 border-gray-light
+  text-sm
+  rounded-lg
+  focus:outline-none focus:border-brand-primary
+  transition
+  text-dark
+  font-medium;
+}

@@ -1,143 +1,252 @@
-<div class="flex items-center justify-center h-full">
-  <div class="my-auto px-5 py-5 sm:px-20 sm:py-10">
-    <!-- Logo -->
-    <div class="h-12 mt-3">
-      <img class="h-full mx-auto" src="assets/images/logo.svg" alt="Qrove" />
-    </div>
-    <!-- Heading & Description -->
-    <div class="my-10 text-center">
-      <h1 class="text-4xl font-semibold mb-4 text-brand-primary-dark">Log Into My Account</h1>
-      <h2 class="w-4/5 mx-auto text-sm font-medium text-brand-primary-dark">
-        Log into your account to manage & monitor your team, projects and more.
-      </h2>
-    </div>
+<div class="flex h-full">
+  <div
+    class="
+      hidden
+      overflow-auto
+      w-1/2
+      p-5
+      bg-brand-primary-dark
+      h-full
+      md:block
+      bg-pattern
+    "
+  >
+    <div class="lg:w-4/5 mx-auto">
+      <!-- Logo -->
+      <div class="mt-5 logo dark:logo">Qrove</div>
+      <!-- End Logo -->
 
-    <!-- Form -->
-    <form>
-      <!-- Field: Email -->
-      <div class="mb-4">
-        <label for="" class="text-sm block mb-2 font-semibold text-brand-primary-dark">
-          Work Email/Employee ID
-        </label>
-        <input
-          type="text"
-          placeholder="Enter Work Email/Employee ID"
-          class="
-            w-full
-            px-5
-            py-5
-            border-2 border-gray-light
-            text-sm
-            rounded-lg
-            focus:outline-none focus:border-brand-primary
-            transition
-            text-brand-primary-dark
-            font-medium
-          "
-        />
-      </div>
-      <!-- Field: Password -->
-      <div class="mb-4">
-        <label for="" class="text-sm block mb-2 font-semibold text-brand-primary-dark">
-          Password
-        </label>
-        <input
-          type="password"
-          placeholder="Enter Password"
-          class="
-            w-full
-            px-5
-            py-5
-            border-2 border-gray-light
-            text-sm
-            rounded-lg
-            focus:outline-none focus:border-brand-primary
-            transition
-            text-gray-500
-            font-medium
-          "
-        />
-      </div>
+      <!-- Hero Content -->
+      <div class="my-12">
+        <h1 class="text-3xl text-white leading-10 capitalize">
+          <div class="font-bold">Easy way to manage everything</div>
+          <div class="font-light">at your 1Rivet India LLP.</div>
+        </h1>
 
-      <!-- Field: Keep me logged in & forgot password link  -->
-      <div class="mb-4">
-        <div class="flex justify-between">
-          <div>
-            <input type="checkbox" name="keepLoggedIn" id="keepLoggedIn" />
-            <label
-              class="ml-2 font-medium text-brand-primary-dark text-sm"
-              for="keepLoggedIn"
-            >
-              Keep me logged in
-            </label>
-          </div>
-          <a href="#" class="text-sm text-brand-primary font-medium">
-            Forgot Password?
-          </a>
-        </div>
-      </div>
-
-      <!-- Submit button :  Next -->
-      <div class="mb-4">
-        <button class="w-full bg-brand-primary text-white px-3 py-4 rounded-lg">
-          Next
-        </button>
-      </div>
-
-      <!-- Divider : OR -->
-      <div class="my-6 text-center relative">
-        <div class="border border-gray-extra-light absolute top-3 w-full"></div>
-        <span
-          class="
-            font-semibold
-            text-gray-extra-dark
-            bg-white
-            px-4
-            w-2
-            z-10
-            relative
-          "
-        >
-          OR
-        </span>
-      </div>
-
-      <!-- Button : Login with 1Rivet Account  -->
-      <div>
-        <button
-          class="
-            w-full
-            border border-gray-light
-            text-brand-primary-dark
-            font-medium
-            px-3
-            py-4
-            rounded-lg
-            flex
-            items-center
-            justify-center
-            gap-3
-          "
-        >
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M0 0H11.4286V11.4286H0V0Z" fill="#F35325" />
-            <path d="M12.5714 0H24V11.4286H12.5714V0Z" fill="#81BC06" />
-            <path d="M0 12.5715H11.4286V24.0001H0V12.5715Z" fill="#05A6F0" />
-            <path
-              d="M12.5714 12.5715H24V24.0001H12.5714V12.5715Z"
-              fill="#FFBA08"
+        <!-- Info card -->
+        <ul class="my-8 gap-3 flex flex-col">
+          <li class="info-card">
+            <img
+              class="mt-1"
+              src="/assets/images/icons/dashboard.svg"
+              alt="Dashboard"
             />
-          </svg>
+            <div class="ml-5">
+              <h4 class="text-lg font-semibold">Informative Dashboard</h4>
+              <p class="text-sm opacity-60">
+                Get almost all the information from your personalized dashboard
+                about everything.
+              </p>
+            </div>
+          </li>
+          <li class="info-card">
+            <img class="mt-1" src="/assets/images/icons/team.svg" alt="Team" />
+            <div class="ml-5">
+              <h4 class="text-lg font-semibold">Manage Team Members</h4>
+              <p class="text-sm opacity-60">
+                Quickly check your team member’s staffing & additional
+                information & activities.
+              </p>
+            </div>
+          </li>
+          <li class="info-card">
+            <img
+              class="mt-1"
+              src="/assets/images/icons/project.svg"
+              alt="Project"
+            />
+            <div class="ml-5">
+              <h4 class="text-lg font-semibold">Everything about Project</h4>
+              <p class="text-sm opacity-60">
+                Manage your on-going project & history of any projects too.
+                Smooth & one-click staffing.
+              </p>
+            </div>
+          </li>
+          <li class="info-card">
+            <img
+              class="mt-1"
+              src="/assets/images/icons/department.svg"
+              alt="Workspace"
+            />
+            <div class="ml-5">
+              <h4 class="text-lg font-semibold">
+                Transparent 1Rivet India LLP
+              </h4>
+              <p class="text-sm opacity-60">
+                Learn everything about your 1Rivet India LLP. Download important
+                documents.
+              </p>
+            </div>
+          </li>
+          <li class="info-card">
+            <img
+              class="mt-1"
+              src="/assets/images/icons/domain.svg"
+              alt="Self-Learning"
+            />
+            <div class="ml-5">
+              <h4 class="text-lg font-semibold">Self-Learning Environment</h4>
+              <p class="text-sm opacity-60">
+                Employees and/or leads can create & manage road-map & training
+                activities.
+              </p>
+            </div>
+          </li>
+        </ul>
 
-          Continue with 1Rivet Account
-        </button>
+        <!-- copyright -->
+        <p class="flex items-center">
+          <img src="assets/images/icons/copyright.svg" alt="Copyright" />
+          <span class="ml-2 text-gray-light text-sm"> 2021 Qrove. All Rights Reserved </span>
+        </p>
       </div>
-    </form>
+      <!-- End Hero Content -->
+    </div>
+  </div>
+  <!-- Login Form -->
+  <div class="flex w-full h-full overflow-auto m-auto p-5 sm:w-4/6 md:w-1/2">
+    <div class="lg:w-96 m-auto">
+      <!-- Logo -->
+      <div class="mb-8 text-center logo md:hidden">Qrove</div>
+      <!-- End Logo -->
+
+      <!-- Heading & Description -->
+      <div class="mb-8 text-center">
+        <h3 class="text-xl font-semibold mb-2 text-dark">
+          Log Into My Account
+        </h3>
+        <p class="md:w-4/5 mx-auto text-sm text-gray">
+          Log into your account to manage & monitor your team, projects and
+          more.
+        </p>
+      </div>
+
+      <!-- Form -->
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <!-- Field: Email -->
+        <div class="mb-4">
+          <label for="" class="form-label"> Work Email/Employee ID </label>
+          <input
+            type="text"
+            placeholder="Enter Work Email/Employee ID"
+            class="form-control"
+            formControlName="username"
+          />
+        </div>
+        <!-- Field: Password -->
+        <div class="mb-4">
+          <label for="" class="form-label"> Password </label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            class="form-control"
+            formControlName="password"
+            autocomplete
+          />
+        </div>
+
+        <!-- Field: Keep me logged in & forgot password link  -->
+        <div class="mb-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <input type="checkbox" name="keepLoggedIn" id="keepLoggedIn" />
+              <label
+                class="ml-2 font-medium text-dark text-sm"
+                for="keepLoggedIn"
+              >
+                Keep me logged in
+              </label>
+            </div>
+            <a href="#" class="text-sm text-brand-primary font-medium">
+              Forgot Password?
+            </a>
+          </div>
+        </div>
+
+        <!-- Submit button :  Next -->
+        <div class="mb-4">
+          <button type="submit" class="w-full btn-primary">Next</button>
+        </div>
+
+        <!-- Divider : OR -->
+        <div class="my-6 text-center relative">
+          <div
+            class="border border-gray-extra-light absolute top-3 w-full"
+          ></div>
+          <span
+            class="
+              font-semibold
+              text-gray-extra-dark
+              bg-white
+              px-4
+              w-2
+              z-10
+              relative
+            "
+          >
+            OR
+          </span>
+        </div>
+
+        <!-- Button : Login with 1Rivet Account  -->
+        <div>
+          <button
+            class="
+              w-full
+              border border-gray-light
+              text-dark
+              font-medium
+              px-3
+              py-4
+              rounded-lg
+              flex
+              items-center
+              justify-center
+              gap-3
+            "
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0 0H11.4286V11.4286H0V0Z" fill="#F35325" />
+              <path d="M12.5714 0H24V11.4286H12.5714V0Z" fill="#81BC06" />
+              <path d="M0 12.5715H11.4286V24.0001H0V12.5715Z" fill="#05A6F0" />
+              <path
+                d="M12.5714 12.5715H24V24.0001H12.5714V12.5715Z"
+                fill="#FFBA08"
+              />
+            </svg>
+
+            Continue with 1Rivet Account
+          </button>
+        </div>
+      </form>
+
+      <!-- Additional Links -->
+      <ul
+        class="
+          mt-5
+          flex
+          justify-center
+          items-center
+          text-sm text-center text-brand-primary
+        "
+      >
+        <li>
+          <a href="#"> Terms of Services </a>
+        </li>
+        <li class="mx-3.5">
+          <a href="#"> Privacy Policy </a>
+        </li>
+        <li>
+          <a href="#"> Contact Us </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

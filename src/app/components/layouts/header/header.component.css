@@ -1,0 +1,19 @@
+.mobile-menu {
+  @apply fixed max-w-sm w-full h-full overflow-auto left-0 top-0 bottom-0 z-50 bg-brand-primary-dark p-10 transform -translate-x-full transition-all;
+}
+
+.menu-expanded {
+  @apply transform translate-x-0;
+}
+
+.mobile-menu .menu-item {
+  @apply block my-8;
+}
+
+.menu-item {
+  @apply text-sm opacity-80 transition-all duration-300 ease-in-out hover:opacity-100;
+}
+
+.menu-item.active {
+  @apply font-bold opacity-100;
+}

@@ -1,17 +1,27 @@
-<div class="flex items-center gap-x-2 mt-5 bg-gray-extra-light py-10 pr-5 rounded-xl">
-  <img src="assets/images/graphics/nothing-to-show.svg" alt="No Data Found" />
-  <div>
-    <h2 class="text-3xl font-bold my-2">
-      Dashboard is currently under development.
-    </h2>
-    <p class="text-gray-500">
+<div
+  class="
+    lg:flex lg:items-center lg:justify-items-center lg:gap-x-2
+    bg-gray-extra-light
+    border border-gray-200
+    mt-5
+    card
+  "
+>
+  <!-- <div lottie [options]="options"></div> -->
+  <ng-lottie class="w-5/12 max-w-full" [options]="options"></ng-lottie>
+  <!-- <img
+    src="assets/images/graphics/nothing-to-show.svg"
+    class="mx-auto"
+    alt="No Data Found"
+  /> -->
+  <div class="lg:ml-12">
+    <h2 class="my-2">Dashboard is currently under development.</h2>
+    <p class="text-gray lg:w-4/5">
       Anyways, why don't you visit organization, it is there for you to explore
       and learn almost everything about 1Rivet India LLP.
     </p>
     <div class="mt-4">
-      <button class="bg-brand-primary text-white text-sm px-6 py-4 rounded-lg">
-        Visit Organization
-      </button>
+      <button class="btn-primary">Visit Organization</button>
     </div>
   </div>
 </div>

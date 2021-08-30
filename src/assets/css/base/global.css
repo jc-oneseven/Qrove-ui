@@ -1,0 +1,16 @@
+body {
+  overflow: hidden;
+}
+
+/* Headings */
+@layer base {
+  h2 {
+    @apply text-2xl font-bold;
+  }
+
+  @screen md {
+    h2 {
+      @apply text-3xl;
+    }
+  }
+}

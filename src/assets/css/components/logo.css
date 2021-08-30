@@ -1,0 +1,8 @@
+/* Logo */
+.logo {
+  @apply text-brand-primary-dark text-3xl font-extrabold;
+}
+
+.dark\:logo {
+  @apply text-white;
+}
